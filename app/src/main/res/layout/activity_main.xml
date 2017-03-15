@@ -10,55 +10,136 @@
     android:orientation="vertical"
     tools:context="com.wujie.ftpupanddown.MainActivity">
 
-    <EditText
-        android:id="@+id/server_ip_et"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="192.168.1.1"
-        android:hint="ip"/>
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/server_port_et"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="21"
-        android:hint="port"/>
 
-    <EditText
-        android:id="@+id/ftp_username_et"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="admin"
-        android:hint="用户名"/>
+            <EditText
+                android:id="@+id/server_ip_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="192.168.1.1"
+                android:hint="ip"/>
 
-    <EditText
-        android:id="@+id/ftp_password_et"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="admin"
-        android:hint="密码"/>
+            <EditText
+                android:id="@+id/server_port_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="21"
+                android:hint="port"/>
 
-    <EditText
-        android:id="@+id/ftp_file_path_et"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="保存路径"/>
+            <EditText
+                android:id="@+id/ftp_username_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="admin"
+                android:hint="用户名"/>
 
-    <EditText
-        android:id="@+id/file_path_et"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="文件源地址"/>
+            <EditText
+                android:id="@+id/ftp_password_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="admin"
+                android:hint="密码"/>
 
-    <Button
-        android:id="@+id/btn_upload"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="上传"/>
+            <EditText
+                android:id="@+id/ftp_file_path_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="保存路径"/>
 
-    <TextView
-        android:id="@+id/result"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="16sp"/>
+            <EditText
+                android:id="@+id/file_path_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="文件源地址"/>
+
+            <Button
+                android:id="@+id/btn_upload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="上传"/>
+
+            <TextView
+                android:id="@+id/result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"/>
+            <EditText
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="文件源地址"/>
+            <EditText
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="文件源地址"/>
+            <EditText
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="文件源地址"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:id="@+id/id_password_guest_net"
+                    android:layout_width="150dp"
+                    android:singleLine="true"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="5dp"
+                    android:text="密码"
+                    />
+
+                <com.wujie.ftpupanddown.DisplayPasswordEditText
+                    android:id="@+id/id_guest_net_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_toRightOf="@id/id_password_guest_net"
+                    android:background="@android:drawable/edit_text"
+                    android:drawableRight="@mipmap/display_edit_icon_eye_off"
+                    android:inputType="textPassword"
+                    android:hint="nihoa"
+                    android:paddingRight="14dp"
+                    android:textSize="12sp"
+                    />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@android:color/holo_blue_light"/>
+            </RelativeLayout>
+
+            <com.wujie.ftpupanddown.DisplayPasswordEditText
+
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/bg_edittext_radius"
+                android:drawableRight="@mipmap/display_edit_icon_eye_off"
+                android:inputType="textPassword"
+                android:hint="文件源地址"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_alignParentBottom="true"
+                android:background="@android:color/holo_blue_light"/>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
 </LinearLayout>
